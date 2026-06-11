@@ -1,1 +1,231 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agronegócio Sustentável</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            scroll-behavior: smooth;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #1b5e20;
+            color: #fff;
+            padding: 15px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 24px;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #c8e6c9;
+        }
+
+        /* BANNER */
+        .banner {
+            background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 60px; /* Para compensar o header fixo */
+        }
+        .banner h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .banner p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .btn {
+            padding: 15px 30px;
+            background: #43a047;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .btn:hover {
+            background: #2e7d32;
+            transform: translateY(-3px);
+        }
+
+        /* SEÇÕES GERAIS */
+        section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1b5e20;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #43a047;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* SEÇÃO SOBRE */
+        .sobre-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        .sobre-texto {
+            flex: 1;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* SEÇÃO DE CARDS */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            color: #1b5e20;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* RODAPÉ */
+        footer {
+            background: #1b5e20;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .sobre-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .banner h2 {
+                font-size: 2.5rem;
+            }
+            nav {
+                display: none; /* Em telas menores, um menu hambúrguer seria ideal */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>EcoAgro</h1>
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#praticas">Práticas</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="home" class="banner">
+        <div>
+            <h2>Cultivando o Futuro</h2>
+            <p>Soluções sustentáveis para o agronegócio moderno.</p>
+            <a href="#sobre" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2 class="section-title">Sobre Nós</h2>
+        <div class="sobre-content">
+            <div class="sobre-texto">
+                <p>O agronegócio sustentável é o pilar para o futuro do nosso planeta. Trabalhamos para integrar alta tecnologia à preservação ambiental, garantindo colheitas ricas, redução do impacto ecológico e valorização do pequeno e grande produtor.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="praticas">
+        <h2 class="section-title">Nossas Práticas</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Agricultura de Precisão</h3>
+                <p>Utilização de sensores e drones para otimizar o uso de água, fertilizantes e defensivos, reduzindo o desperdício.</p>
+            </div>
+            <div class="card">
+                <h3>Manejo de Solo</h3>
+                <p>Técnicas avançadas de rotação de culturas e plantio direto para manter a terra fértil e biologicamente ativa por gerações.</p>
+            </div>
+            <div class="card">
+                <h3>Energia Renovável</h3>
+                <p>Implementação de painéis solares e biomassa para tornar as operações autossustentáveis e limpas.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <p>&copy; 2026 EcoAgro - Todos os direitos reservados. Promovendo a sustentabilidade no campo.</p>
+    </footer>
+
+</body>
+</html>
